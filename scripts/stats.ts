@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { writeFile } from 'node:fs/promises';
 import type { Year } from '../src/worker';
 
