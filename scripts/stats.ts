@@ -53,7 +53,7 @@ export async function request(date: { from?: Date; to?: Date }) {
 		}
 		`,
     variables: {
-      username: 'terkelg',
+      username: 'sothearo-kay',
       from: date.from?.toISOString(),
       to: date.to?.toISOString()
     }
@@ -62,7 +62,7 @@ export async function request(date: { from?: Date; to?: Date }) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'User-Agent': 'terkelg/readme',
+      'User-Agent': 'sothearo-kay/readme',
       Authorization: `bearer ${process.env.API_TOKEN_GITHUB}`
     },
     body: JSON.stringify(body)

@@ -2,7 +2,7 @@ import type { Year } from './worker';
 
 const BP_MEDIUM = 550;
 const BP_LARGE = 700;
-const BODY_COPY = `I'm Terkel. A Brooklyn-based internet enthusiast, creative technologist and maker of digital ephemera.`;
+const BODY_COPY = `I'm Sothearo, A web developer. I create engaging web applications using modern technologies and enjoy staying updated on the latest industry trends.`;
 
 interface Props {
   width?: number;
