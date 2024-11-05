@@ -29,7 +29,7 @@ const worker: ExportedHandler = {
       const index = Number(searchParams.get('i')) ?? 0;
       content = link({ height: 18, width: 100, index, theme })('Instagram');
     } else if (section == 'fallback') {
-      content = fallback({ height: 180, width: 420, theme });
+      content = fallback({ height: 160, width: 420, theme });
     } else {
       const years = data.years.slice(0, MAX_YEARS);
       const location = {
