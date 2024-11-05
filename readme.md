@@ -22,5 +22,5 @@
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=main&theme=dark">
-  <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=main&theme=light" alt="I'm Terkel. A Brooklyn-based internet enthusiast, creative technologist and maker of digital ephemera." width="100%" height="290" align="left">
+  <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=main&theme=light" alt="I'm Sothearo, A web developer. I create engaging web applications using modern technologies and enjoy staying updated on the latest industry trends." width="100%" height="290" align="left">
 </picture>
