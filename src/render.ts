@@ -219,6 +219,7 @@ export const main = (props: Props & Main) => {
 			grid-area: 1 / 1 / span 1 / span 6;
 			font-size: 18px;
 			font-weight: 300;
+			padding-top: 20px
 		}
 		.intro span {
 			contain: content;
