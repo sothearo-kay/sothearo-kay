@@ -2,7 +2,7 @@ import type { Year } from './worker';
 
 const BP_MEDIUM = 550;
 const BP_LARGE = 700;
-const BODY_COPY = `I'm Sothearo, A web developer. I create engaging web applications with modern tech. I like reading manga 📓.`;
+const BODY_COPY = `I'm Sothearo, A web developer. I create engaging web applications with modern tech. I love reading manga.`;
 
 interface Props {
   width?: number;
