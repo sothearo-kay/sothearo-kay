@@ -22,9 +22,9 @@ const worker: ExportedHandler = {
     } else if (section === 'link-website') {
       const index = Number(searchParams.get('i')) ?? 0;
       content = link({ height: 18, width: 100, index, theme })('Website');
-    } else if (section === 'link-twitter') {
+    } else if (section === 'link-blog') {
       const index = Number(searchParams.get('i')) ?? 0;
-      content = link({ height: 18, width: 100, index, theme })('Twitter');
+      content = link({ height: 18, width: 100, index, theme })('Blog');
     } else if (section === 'link-instagram') {
       const index = Number(searchParams.get('i')) ?? 0;
       content = link({ height: 18, width: 100, index, theme })('Instagram');
