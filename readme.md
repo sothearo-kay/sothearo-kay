@@ -9,17 +9,17 @@
   </picture>
 </a>
 <img src="data:null;," width="100%" height="0" align="left" alt="">
+<a href="https://sothearo-vault.vercel.app/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=dark">
+    <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=light&i=2" alt="visit my blog" width="100" height="18" align="left">
+  </picture>
+</a>
+<img src="data:null;," width="100%" height="0" align="left" alt="">
 <a href="https://www.instagram.com/sothearo__/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=link-instagram&theme=dark">
     <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-instagram&theme=light&i=2" alt="visit my instagram" width="100" height="18" align="left">
-  </picture>
-</a>
-<img src="data:null;," width="100%" height="0" align="left" alt="">
-<a href="https://sothearo-vault.vercel.app/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=dark">
-    <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-instagram&theme=light&i=2" alt="visit my blog" width="100" height="18" align="left">
   </picture>
 </a>
 <img src="data:null;," width="100%" height="0" align="left" alt="">
