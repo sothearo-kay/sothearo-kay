@@ -5,14 +5,14 @@
 <a href="https://sothearo-vault.vercel.app/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=dark">
-    <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=light&i=2" alt="visit my blog" width="100" height="18" align="left">
+    <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=light&i=0" alt="visit my blog" width="100" height="18" align="left">
   </picture>
 </a>
 <img src="data:null;," width="100%" height="0" align="left" alt="">
 <a href="https://sothearo.dev/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=link-website&theme=dark" label="Visit">
-    <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-website&theme=light&i=0" alt="visit my website" width="100" height="18px" align="left">
+    <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-website&theme=light&i=1" alt="visit my website" width="100" height="18px" align="left">
   </picture>
 </a>
 <img src="data:null;," width="100%" height="0" align="left" alt="">
