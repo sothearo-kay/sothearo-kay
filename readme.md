@@ -2,7 +2,7 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=top&theme=dark">
   <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=top&theme=light" width="100%" height="20" align="left">
 </picture>
-<a href="https://sothearo-vault.vercel.app/">
+<a href="https://sothearo-kay.github.io/vault">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=dark">
     <img src="https://sothearo-kay.kaysothearo19.workers.dev?section=link-blog&theme=light&i=0" alt="visit my blog" width="100" height="18" align="left">
