@@ -379,15 +379,15 @@ export const top = (props: Props & { contributions: number; views: number }) => 
 			text-align: left;
 			grid-area: 1 / 1 / span 1 / span 2;
 		}
+		.stats {
+			display: none;
+			grid-area: 1 / 3 / span 1 / span 2;
+		}
 		.contributions {
 			--delay: var(--animate-in-contributions-delay);
-			contain: strict; /* hide on small screens */
-			grid-area: 1 / 3 / span 1 / span 1;
 		}
 		.views {
 			--delay: var(--animate-in-contributions-delay);
-			contain: strict; /* hide on small screens */
-			grid-area: 1 / 4 / span 1 / span 1;
 		}
 		.readme {
 			--delay: var(--animate-in-readme-delay);
@@ -397,15 +397,11 @@ export const top = (props: Props & { contributions: number; views: number }) => 
 		}
 
 		@media (width > ${BP_MEDIUM}px) {
-			.contributions {
-				contain: content; /* show again */
-				text-align: right;
-				padding-inline-end: 8px;
-			}
-			.views {
-				contain: content; /* show again */
-				text-align: left;
-				padding-inline-start: 8px;
+			.stats {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
 			}
 		}
 	`;
@@ -413,11 +409,13 @@ export const top = (props: Props & { contributions: number; views: number }) => 
   const html = /*html*/ `
 		<div class="wrapper grid label">
 			<div class="menu fade-in">Menu</div>
-			<div class="contributions fade-in">
-				<span class="shine">${(props.contributions / 1000).toFixed(1)}k</span> Contributions
-			</div>
-			<div class="views fade-in">
-				<span class="shine">${formatCount(props.views)}</span> Views
+			<div class="stats">
+				<div class="contributions fade-in">
+					<span class="shine">${(props.contributions / 1000).toFixed(1)}k</span> Contributions
+				</div>
+				<div class="views fade-in">
+					<span class="shine">${formatCount(props.views)}</span> Views
+				</div>
 			</div>
 			<div class="readme fade-in">readme.md</div>
 		</div>
