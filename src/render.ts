@@ -333,21 +333,21 @@ export const main = (props: Props & Main) => {
 		<main class="wrapper grid">
 			<article class="intro">
 				<p>${BODY_COPY.split('')
-      .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
-      .join('')}</p>
+          .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
+          .join('')}</p>
 			</article>
 			<article class="graph">
 				<div class="years" style="--w: ${props.length}; --h: ${props.sizes[0][1]};">
 					${props.years
-      .map(
-        (year, i) => /* html */ `
+            .map(
+              (year, i) => /* html */ `
 						<div class="year year--${i}" style="--w: ${props.sizes[i][0]}; --h: ${props.sizes[i][1]};">
 							<div class="year__days">${days(year.days)}</div>
 							<div class="year__label label"><span>${date(i)}</span></div>
 						</div>
 					`
-      )
-      .join('')}
+            )
+            .join('')}
 				</div>
 			</article>
 		</main>
@@ -545,8 +545,8 @@ export const fallback = (props: Props & { width: number }) => {
 		<main class="wrapper">
 			<div class="intro">
 				<p>${BODY_COPY.split('')
-      .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
-      .join('')}</p>
+          .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
+          .join('')}</p>
 				<p class="hint fade-in">— I'm all for the foxy browser, but try Chrome/Safari for this one!</p>
 			</div>
 		</main>
