@@ -460,7 +460,7 @@ export const link = (props: Props & { index: number }) => (label: string) => {
 			gap: 3px;
 		}
 		.link__label {
-			animation-delay: ${Math.random() * 10}s;
+			animation-delay: ${props.index * 3}s;
 		}
 		.link__arrow {
 			font-size: 0.75em;
@@ -470,7 +470,7 @@ export const link = (props: Props & { index: number }) => (label: string) => {
 			animation-duration: 5s;
 			animation-timing-function: ease-in-out;
 			animation-iteration-count: infinite;
-			animation-delay: ${Math.random() * 5}s;
+			animation-delay: ${props.index * 3}s;
 		}
 
 		@keyframes rotate {
