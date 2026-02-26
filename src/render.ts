@@ -333,21 +333,21 @@ export const main = (props: Props & Main) => {
 		<main class="wrapper grid">
 			<article class="intro">
 				<p>${BODY_COPY.split('')
-          .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
-          .join('')}</p>
+      .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
+      .join('')}</p>
 			</article>
 			<article class="graph">
 				<div class="years" style="--w: ${props.length}; --h: ${props.sizes[0][1]};">
 					${props.years
-            .map(
-              (year, i) => /* html */ `
+      .map(
+        (year, i) => /* html */ `
 						<div class="year year--${i}" style="--w: ${props.sizes[i][0]}; --h: ${props.sizes[i][1]};">
 							<div class="year__days">${days(year.days)}</div>
 							<div class="year__label label"><span>${date(i)}</span></div>
 						</div>
 					`
-            )
-            .join('')}
+      )
+      .join('')}
 				</div>
 			</article>
 		</main>
@@ -359,7 +359,9 @@ export const main = (props: Props & Main) => {
   });
 };
 
-export const top = (props: Props & { contributions: number }) => {
+const formatCount = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : `${n}`);
+
+export const top = (props: Props & { contributions: number; views: number }) => {
   const styles = /* css */ `
 		${shared}
 
@@ -375,39 +377,38 @@ export const top = (props: Props & { contributions: number }) => {
 			--delay: var(--animate-in-menu-delay);
 			contain: content;
 			text-align: left;
-			grid-area: 1 / 1 / span 1 / span 2;
+			grid-area: 1 / 1 / span 1 / span 3;
 		}
 		.contributions {
 			--delay: var(--animate-in-contributions-delay);
-			contain: strict; /* hide, show later */
+			contain: strict; /* hide on small screens */
 			grid-area: 1 / 3 / span 1 / span 2;
+		}
+		.views {
+			--delay: var(--animate-in-contributions-delay);
+			contain: strict; /* hide on small screens */
+			grid-area: 1 / 4 / span 1 / span 2;
 		}
 		.readme {
 			--delay: var(--animate-in-readme-delay);
 			contain: content;
 			text-align: right;
-			grid-area: 1 / 5 / span 1 / span 2;
+			grid-area: 1 / 4 / span 1 / span 3;
 		}
 
 		@media (width > ${BP_MEDIUM}px) {
 			.menu {
-				grid-area: 1 / 1 / span 1 / span 2;
+				grid-area: 1 / 1 / span 1 / span 1;
 			}
 			.contributions {
-				contain: content; /* show agian */
-				grid-area: 1 / 3 / span 1 / span 2;
+				contain: content; /* show again */
+				grid-area: 1 / 2 / span 1 / span 2;
+				text-align: center;
 			}
-			.readme {
-				grid-area: 1 / 5 / span 1 / span 2;
-			}
-		}
-
-		@media (width > ${BP_LARGE}px) {
-			.menu {
-				grid-area: 1 / 1 / span 1 / span 3;
-			}
-			.contributions {
+			.views {
+				contain: content; /* show again */
 				grid-area: 1 / 4 / span 1 / span 2;
+				text-align: center;
 			}
 			.readme {
 				grid-area: 1 / 6 / span 1 / span 1;
@@ -420,6 +421,9 @@ export const top = (props: Props & { contributions: number }) => {
 			<div class="menu fade-in">Menu</div>
 			<div class="contributions fade-in">
 				<span class="shine">${(props.contributions / 1000).toFixed(1)}k</span> Contributions
+			</div>
+			<div class="views fade-in">
+				<span class="shine">${formatCount(props.views)}</span> Views
 			</div>
 			<div class="readme fade-in">readme.md</div>
 		</div>
@@ -541,8 +545,8 @@ export const fallback = (props: Props & { width: number }) => {
 		<main class="wrapper">
 			<div class="intro">
 				<p>${BODY_COPY.split('')
-          .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
-          .join('')}</p>
+      .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
+      .join('')}</p>
 				<p class="hint fade-in">— I'm all for the foxy browser, but try Chrome/Safari for this one!</p>
 			</div>
 		</main>

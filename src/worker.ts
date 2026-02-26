@@ -7,9 +7,13 @@ export type Year = {
   days: number[];
 };
 
+interface Env {
+  VIEWS: KVNamespace;
+}
+
 const MAX_YEARS = 3;
 
-const worker: ExportedHandler = {
+const worker: ExportedHandler<Env> = {
   async fetch(request, env, ctx) {
     const { searchParams } = new URL(request.url);
     const theme = (searchParams.get('theme') ?? 'light') as 'light' | 'dark';
@@ -18,7 +22,10 @@ const worker: ExportedHandler = {
 
     if (section === 'top') {
       const { contributions } = data;
-      content = top({ height: 20, contributions, theme });
+      const raw = await env.VIEWS.get('count');
+      const views = raw ? parseInt(raw) : 0;
+      ctx.waitUntil(env.VIEWS.put('count', String(views + 1)));
+      content = top({ height: 20, contributions, views: views + 1, theme });
     } else if (section === 'link-website') {
       const index = Number(searchParams.get('i')) ?? 0;
       content = link({ height: 18, width: 100, index, theme })('Website');

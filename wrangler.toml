@@ -1,3 +1,7 @@
-name = "sothearo-kay"
+name = "sothearo"
 main = "src/worker.ts"
 compatibility_date = "2023-11-21"
+
+[[kv_namespaces]]
+binding = "VIEWS"
+id = "b60c1ff3e0a64478bdbf4020c1158e4a"
