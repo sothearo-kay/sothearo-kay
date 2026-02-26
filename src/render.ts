@@ -377,41 +377,35 @@ export const top = (props: Props & { contributions: number; views: number }) => 
 			--delay: var(--animate-in-menu-delay);
 			contain: content;
 			text-align: left;
-			grid-area: 1 / 1 / span 1 / span 3;
+			grid-area: 1 / 1 / span 1 / span 2;
 		}
 		.contributions {
 			--delay: var(--animate-in-contributions-delay);
 			contain: strict; /* hide on small screens */
-			grid-area: 1 / 3 / span 1 / span 2;
+			grid-area: 1 / 3 / span 1 / span 1;
 		}
 		.views {
 			--delay: var(--animate-in-contributions-delay);
 			contain: strict; /* hide on small screens */
-			grid-area: 1 / 4 / span 1 / span 2;
+			grid-area: 1 / 4 / span 1 / span 1;
 		}
 		.readme {
 			--delay: var(--animate-in-readme-delay);
 			contain: content;
 			text-align: right;
-			grid-area: 1 / 4 / span 1 / span 3;
+			grid-area: 1 / 5 / span 1 / span 2;
 		}
 
 		@media (width > ${BP_MEDIUM}px) {
-			.menu {
-				grid-area: 1 / 1 / span 1 / span 1;
-			}
 			.contributions {
 				contain: content; /* show again */
-				grid-area: 1 / 2 / span 1 / span 2;
-				text-align: center;
+				text-align: right;
+				padding-inline-end: 8px;
 			}
 			.views {
 				contain: content; /* show again */
-				grid-area: 1 / 4 / span 1 / span 2;
-				text-align: center;
-			}
-			.readme {
-				grid-area: 1 / 6 / span 1 / span 1;
+				text-align: left;
+				padding-inline-start: 8px;
 			}
 		}
 	`;
