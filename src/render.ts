@@ -377,11 +377,11 @@ export const top = (props: Props & { contributions: number; views: number }) => 
 			--delay: var(--animate-in-menu-delay);
 			contain: content;
 			text-align: left;
-			grid-area: 1 / 1 / span 1 / span 2;
+			grid-column: span 3;
 		}
 		.stats {
 			display: none;
-			grid-area: 1 / 3 / span 1 / span 2;
+			grid-column: span 4;
 		}
 		.contributions {
 			--delay: var(--animate-in-contributions-delay);
@@ -393,15 +393,21 @@ export const top = (props: Props & { contributions: number; views: number }) => 
 			--delay: var(--animate-in-readme-delay);
 			contain: content;
 			text-align: right;
-			grid-area: 1 / 5 / span 1 / span 2;
+			grid-column: span 3;
 		}
 
 		@media (width > ${BP_MEDIUM}px) {
+			.menu {
+				grid-column: span 1;
+			}
 			.stats {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				gap: 16px;
+			}
+			.readme {
+				grid-column: span 1;
 			}
 		}
 	`;
