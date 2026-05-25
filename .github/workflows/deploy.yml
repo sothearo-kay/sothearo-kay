@@ -34,7 +34,7 @@ jobs:
       - name: Fetch Stats
         run: pnpm stats
         env:
-          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3.7.0
